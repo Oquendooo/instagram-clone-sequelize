@@ -1,0 +1,30 @@
+{
+  "name": "instagram-clone-sequelize",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon --exec babel-node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "body-parser": "^1.19.0",
+    "core-js": "^3.4.2",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "nodemon": "^1.19.1",
+    "pg": "^7.14.0",
+    "pg-hstore": "^2.3.3",
+    "regenerator-runtime": "^0.13.3",
+    "sequelize": "^5.21.2"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/node": "^7.7.0"
+  }
+}
