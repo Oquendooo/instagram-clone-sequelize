@@ -1,0 +1,50 @@
+@media screen and (max-width: 1000px) {
+  .container{
+    max-width: 600px !important;
+  }
+  #feedPage{
+  .feedPage__inner{
+    flex-direction: column-reverse;
+    .feedPage__posts{
+    width: 100%;
+    }
+    .feedPage__rightSection{
+      width: 100%;
+      .feedPage_userInfo{
+        display: none;
+      }
+    }
+  }
+}
+#storiesSection {
+  height: auto;
+  margin-bottom:24px;
+  .storiesSection__inner{
+    padding: 10px 0;
+    .storiesSection__header{
+      display: none;
+    }
+    .storiesSection__userStories{
+      display: flex;
+      height: auto;
+
+      .storiesSection__userStory{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .storiesSection__username_and_time{
+          margin: 0 5px;
+          .storiesSection__username{
+            font-size: .6rem ;
+            text-overflow: ellipsis;
+          }
+          .storiesSection__time{
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+}

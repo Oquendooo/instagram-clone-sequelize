@@ -4,8 +4,8 @@ import './Header.scss';
 const Header = () => {
   
   return(
-    <div id="Header">
-      <div className="header-inner container mx-auto">
+    <div id="header">
+      <div className="header-inner container">
 
         <div className="left-items">
           <div className="logo-icon">
@@ -19,6 +19,7 @@ const Header = () => {
 
         <div className="search-box">
           <input type="text" placeholder="Search"/>
+          <div className=""></div>
         </div>
 
         <div className="right-items">
