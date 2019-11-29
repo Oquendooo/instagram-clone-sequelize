@@ -1,2 +1,2 @@
-# instagram-clone-sequelize
-# instagram-clone-sequelize
+# instagram-clone
+# instagram-clone
