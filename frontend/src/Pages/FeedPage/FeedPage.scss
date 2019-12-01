@@ -1,0 +1,42 @@
+#feedPage{
+  background: #fafafa;
+  padding-top: 60px;
+  .feedPage__inner{
+    display:flex;
+    max-width: 935px;
+    padding: 0;
+    .feedPage__posts{
+      width: 65.7%;
+      margin-right: 28px;
+    }
+    .feedPage__rightSection{
+      position: relative;
+      right: 0;
+      width: 35%;
+      max-width: 293px;
+      .feedPage_userInfo{
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+        img{
+          height: 55px;
+          width: 55px;
+          border-radius: 50%;
+        }
+      }
+      .feedPage_username_and_nickname{
+          margin-left: 14px;
+        .feedPage_username{
+          font-weight: bold;
+        }
+        .feedPage_nickname{
+
+        }
+      }
+    }
+    .feedPage__rightSection--fixed{
+      left: 1015px;
+      position: fixed;
+    }
+  }
+}
