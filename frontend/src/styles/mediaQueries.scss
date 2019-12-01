@@ -1,10 +1,23 @@
+@media screen and (max-width: 525px) {
+  #header{
+    .header-inner {
+      .search-box{
+        display: none;
+      }
+    }
+  }
+}
 @media screen and (max-width: 1000px) {
-  .container{
-    max-width: 600px !important;
+  #header{
+    .header-inner{
+      padding: 0px 20px;
+      height: 52px;
+    }
   }
   #feedPage{
   .feedPage__inner{
     flex-direction: column-reverse;
+    max-width: 600px !important;
     .feedPage__posts{
     width: 100%;
     }

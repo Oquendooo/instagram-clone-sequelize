@@ -55,6 +55,7 @@
     .far, .fas{
       font-size:1.4rem;
       margin: 0 6px;
+      cursor: pointer;
 
     }
     .post__left_actions{
@@ -67,6 +68,42 @@
     }
   }
   .post__engagement{
+  
+
+    .post__likes{
+      padding: 0 16px;
+    }
+    .post__post_content{
+      display: flex;
+      padding: 0 16px;
+      .post__poster_username{
+        margin-right: 4px;
+        color: #262626;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    }
+    .post__viewall_button_wrapper{
+      .post__viewall_button{
+        color: #999;
+        padding: 0 16px;
+        cursor: pointer;
+      }
+    }
+    .post__comments{
+      .post__comment{
+        display: flex;
+        padding: 0 16px;
+
+        .post__commenter_username{
+          margin-right: 4px;
+          color: #262626;
+          font-weight: 600;
+          cursor: pointer;
+        }
+        .post__comment_body{}
+      }
+    }
 
   }
   .post__comment_input{
