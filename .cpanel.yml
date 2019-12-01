@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/aarovfze/repositories/instagram-clone
+    - /bin/cp -r * $DEPLOYPATH
