@@ -15,11 +15,11 @@ function App() {
   return (
     <div className="App">
 
-      <Route exact path='/' component={props => <Header {...props} /> }/>
+      <Route path='/' component={props => <Header {...props} /> }/>
 
       <Route exact path='/' component={props => <FeedPage {...props} /> }/>
 
-      <Route exact path='/explore' component={props => <ExplorePage {...props} /> }/>
+      <Route exact path='/explore/' component={props => <ExplorePage {...props} /> }/>
 
       <Route exact path='/:username' component={props => <ProfilePage {...props} /> }/>
 
