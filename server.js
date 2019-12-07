@@ -5,7 +5,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import http from 'http';
 import path from 'path';
-import models from './backend/models';
+// import models from './backend/models';
 
 // import createUserController from './backend/controllers/user';
 // import createPostController from './backend/controllers/posts';
