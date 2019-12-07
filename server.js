@@ -13,7 +13,7 @@ import path from 'path';
 // const UserController = createUserController(models);
 // const PostController = createPostController(models);
 
-models.sequelize.sync();
+// models.sequelize.sync();
 
 const app = express();
 
