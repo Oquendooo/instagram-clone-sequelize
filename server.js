@@ -30,9 +30,9 @@ app.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, 'front', 'build', 'index.html'))
 });
 
-
-http.createServer(app).listen(4000);
-console.log("Running a http server on port ", 4000);
+const PORT = process.env.PORT || 4000;
+http.createServer(app).listen(PORT);
+console.log("Running a http server on port ", PORT);
 
 
 

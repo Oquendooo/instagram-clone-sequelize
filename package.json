@@ -4,19 +4,22 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "prod": "node server.js",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "frontend": "npm run start --prefix frontend",
     "backend": "nodemon --exec babel-node server.js",
+    "clean": "rm -rf build && mkdir build",
+    "build-server": "./node_modules/.bin/babel -d ./build ../ -s",
+    "build": "./node_modules/.bin/babel ./ -d ./dist --ignore node_modules,frontend",
     "start": "nodemon --exec babel-node server.js",
     "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.5",
+    "@babel/preset-env": "^7.5.5",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.0",
     "concurrently": "^5.0.0",
@@ -30,7 +33,6 @@
     "sequelize": "^5.21.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/node": "^7.7.0"
+    "@babel/node": "^7.5.0"
   }
 }
