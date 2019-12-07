@@ -5,7 +5,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 import http from 'http';
 import path from 'path';
-import models from './backend/models';
+// import models from './backend/models';
 
 // import createUserController from './backend/controllers/user';
 // import createPostController from './backend/controllers/posts';
@@ -13,15 +13,15 @@ import models from './backend/models';
 // const UserController = createUserController(models);
 // const PostController = createPostController(models);
 
-models.sequelize.sync();
+// models.sequelize.sync();
 
 const app = express();
 
 app.use(bodyParser.json({type: '*/*' }));
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/api/v1', UserController);
-app.use('/api/v1', PostController);
+// app.use('/api/v1', UserController);
+// app.use('/api/v1', PostController);
 
 //Serve any static files built by React
 if(process.env.PORT){
