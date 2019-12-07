@@ -9,7 +9,7 @@
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "frontend": "npm run start --prefix frontend",
     "backend": "nodemon --exec babel-node server.js",
-    "start": "cd ./frontend && npm install && npm run build && cd .. && npm run backend",
+    "start": "nodemon --exec babel-node server.js",
     "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build"
   },
   "author": "",
