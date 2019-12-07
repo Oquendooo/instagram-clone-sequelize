@@ -20,8 +20,8 @@ const app = express();
 app.use(bodyParser.json({type: '*/*' }));
 app.use(bodyParser.urlencoded({extended: false}));
 
-app.use('/api/v1', UserController);
-app.use('/api/v1', PostController);
+// app.use('/api/v1', UserController);
+// app.use('/api/v1', PostController);
 
 //Serve any static files built by React
 if(process.env.PORT){
