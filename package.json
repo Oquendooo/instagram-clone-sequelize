@@ -8,7 +8,8 @@
     "start": "node server.js",
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "frontend": "npm run start --prefix frontend",
-    "backend": "nodemon --exec babel-node server.js"
+    "backend": "nodemon --exec babel-node server.js",
+    "prod": "cd ./frontend && npm install && npm run build && cd .. && npm run backend"
   },
   "author": "",
   "license": "ISC",
