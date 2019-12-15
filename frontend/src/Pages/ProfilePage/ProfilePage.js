@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProfilePage.scss';
+import postImage from '../../assets/images/nature-red-forest-leaves.jpg';
 
 const ProfilePage = () => {
   const testArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
@@ -88,7 +89,7 @@ const ProfilePage = () => {
 
 
         <div className="profilePage__contentBar">
-          <div className="profilePage__contentTab">
+          <div className="profilePage__contentTab profilePage__contentTab--selected">
             <i class="fas fa-th"></i>
             <span className="profilePage__span">Posts</span>
           </div>
@@ -107,9 +108,29 @@ const ProfilePage = () => {
         </div>
 
         <div className="profilePage__postGrid">
-          <div className="profilePage__postGridItem">
-              <img className="profilePage__userPost" src="" alt=""/>
-          </div>
+          {[1,2,3,4,5,6].map( item => {
+            return(
+              <div className="profilePage__postGridItem">
+                <img className="profilePage__userPost" src={postImage} alt=""/>
+                <div className="profilePage__postGridItemHoverDiv">
+                  <div className="profilePage__postHoverStat">
+                    <i class="fas fa-heart"></i>
+                    <span className="profilePage__postHoverStatCount">
+                      136
+                    </span>
+                  </div>
+
+                  <div className="profilePage__postHoverStat">
+                    <i class="fas fa-heart"></i>
+                    <span className="profilePage__postHoverStatCount">
+                      63
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+
         </div>
 
       </div>
