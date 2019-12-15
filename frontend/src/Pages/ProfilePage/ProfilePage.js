@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProfilePage.scss';
+import postImage from '../../assets/images/nature-red-forest-leaves.jpg';
 
 const ProfilePage = () => {
   const testArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
@@ -72,9 +73,9 @@ const ProfilePage = () => {
         </div>
 
         <div className="profilePage__userStories">
-            {[1,2,3].map( item => {
+            {[1,2,3].map( (item, index) => {
                 return(
-                  <div className="profilePage__userStory">
+                  <div className="profilePage__userStory" key={index}>
                   <div className="profilePage__userStoryImageWrapper">
                     <img src="https://instagram.fewr1-5.fna.fbcdn.net/v/t51.2885-19/s320x320/10623878_1553256358327908_1220634201_a.jpg?_nc_ht=instagram.fewr1-5.fna.fbcdn.net&oh=17287da2fd9ab631c1a560749bd34e2e&oe=5E71AB60" alt=""/>
                     <span className="profilePage__userStoryTitle">Gratitude</span>
@@ -88,7 +89,7 @@ const ProfilePage = () => {
 
 
         <div className="profilePage__contentBar">
-          <div className="profilePage__contentTab">
+          <div className="profilePage__contentTab profilePage__contentTab--selected">
             <i class="fas fa-th"></i>
             <span className="profilePage__span">Posts</span>
           </div>
@@ -107,9 +108,29 @@ const ProfilePage = () => {
         </div>
 
         <div className="profilePage__postGrid">
-          <div className="profilePage__postGridItem">
-              <img className="profilePage__userPost" src="" alt=""/>
-          </div>
+          {[1,2,3,4,5,6].map( (item, index) => {
+            return(
+              <div className="profilePage__postGridItem" key={index}>
+                <img className="profilePage__userPost" src="https://i.ibb.co/j8nmwHn/nature-red-forest-leaves.jpg" alt=""/>
+                <div className="profilePage__postGridItemHoverDiv">
+                  <div className="profilePage__postHoverStat">
+                    <i class="fas fa-heart"></i>
+                    <span className="profilePage__postHoverStatCount">
+                      136
+                    </span>
+                  </div>
+
+                  <div className="profilePage__postHoverStat">
+                    <i class="fas fa-heart"></i>
+                    <span className="profilePage__postHoverStatCount">
+                      63
+                    </span>
+                  </div>
+                </div>
+              </div>
+            )
+          })}
+
         </div>
 
       </div>

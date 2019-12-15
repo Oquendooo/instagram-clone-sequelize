@@ -29,7 +29,7 @@ const Header = () => {
 
           <div className="logo-icon">
             <Link className="siteLogo_icon_atag" to="/">
-              <i class="fab fa-instagram"></i>
+              <i className="fab fa-instagram"></i>
             </Link>
           </div>
 
