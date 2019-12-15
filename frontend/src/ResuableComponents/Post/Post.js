@@ -1,18 +1,21 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './Post.scss';
 
 const Post = ({post}) => {
-  console.log("post", post);
-  const image = 'https://images.pexels.com/photos/3133688/pexels-photo-3133688.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260';
-  const testArray = [1,2];
   return(
     <div id="post">
       <div className="post__header">
-        <img src={post.userIcon} />
+        <Link to="/profile">
+          <img src={post.userIcon} alt="" />
+        </Link>
+        
         <div className="post__username__and__options">
-          <div className="post__username">
-            {post.username}
-          </div>
+          <Link to="/profile">
+            <div className="post__username">
+              {post.username}
+            </div>
+          </Link>
           <div className="post__options">
             <i className="fas fa-ellipsis-h"></i>
           </div>
@@ -22,9 +25,9 @@ const Post = ({post}) => {
       </div>
       <div className="post__actions">
         <div className="post__left_actions">
-          <i class="far fa-heart"></i>
-          <i class="far fa-comment"></i>
-          <i class="fas fa-share-alt"></i>
+          <i className="far fa-heart"></i>
+          <i className="far fa-comment"></i>
+          <i className="fas fa-share-alt"></i>
         </div>
         <div className="post__right_actions">
           <i className="far fa-bookmark"></i>
@@ -38,9 +41,11 @@ const Post = ({post}) => {
         </div>
 
         <div className="post__post_content">
-          <div className="post__poster_username">
-            aaron.shines
-          </div>
+          <Link to="profile">
+            <div className="post__poster_username">
+              aaron.shines
+            </div>
+          </Link>
           <div className="post__body">
             Always True To Self
           </div>
@@ -51,12 +56,14 @@ const Post = ({post}) => {
           </span>
         </div>
         <div className="post__comments">
-          {testArray.map( comment => {
+          {[1,2].map( (comment, index) => {
             return(
-              <div className="post__comment">
-                <div className="post__commenter_username">
-                james.malroy
-                </div>
+              <div className="post__comment" key={index}>
+                <Link to="profile">
+                  <div className="post__commenter_username">
+                  james.malroy
+                  </div>
+                </Link>
                 <div className="post__comment_body">
                   Always True To Self
                 </div>

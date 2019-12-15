@@ -1,15 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import './Header.scss';
 
 const Header = () => {
 
-
-
   const handleScroll = () => { 
       const scroll = window.scrollY;
       const header = document.getElementById('header');
-      const rightSection = document.querySelector('.feedPage__rightSection');
+      // const rightSection = document.querySelector('.feedPage__rightSection');
 
       if (scroll >= 60) {
         header.classList.add('header-fixed');
@@ -50,12 +48,12 @@ const Header = () => {
 
         <div className="right-items">
           <Link className="explore_atag" to="/explore/">
-            <i class="far fa-compass"></i>
+            <i className="far fa-compass"></i>
           </Link>
 
-          <i class="far fa-heart"></i>
+          <i className="far fa-heart"></i>
           <Link className="userProfile_icon_atag" to="/profile">
-            <i class="far fa-user"></i>
+            <i className="far fa-user"></i>
           </Link>
 
         </div>

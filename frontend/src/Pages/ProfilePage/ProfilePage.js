@@ -1,11 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './ProfilePage.scss';
-import postImage from '../../assets/images/nature-red-forest-leaves.jpg';
 
 const ProfilePage = () => {
-  const testArray = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22];
-
   return(
     <div id="profilePage">
       <div className="profilePage__inner container">
@@ -21,7 +18,7 @@ const ProfilePage = () => {
                 aaron.shines
               </div>
 
-              <Link className="profilePage__editProfileBtnWrapper">
+              <Link to="/accounts/edit" className="profilePage__editProfileBtnWrapper">
                 <div className="profilePage__editProfileBtn">Edit Profile</div>
               </Link>
               
@@ -55,17 +52,17 @@ const ProfilePage = () => {
               </div>
 
               <div className="profilePage__userBio">
-                ♎️ Always Stay True To Your Self
+                <span role="img" aria-label="libra">♎️</span> Always Stay True To Your Self
                 <br />
-                ✨ Optimist
+                <span role="img" aria-label="magic">✨</span> Optimist
                 <br />
-                💻 Software Engineer/Developer
+                <span role="img" aria-label="computer">💻</span> Software Engineer/Developer
                 <br />
-                📍 NY
+                <span role="img" aria-label="pin">📍</span> NY
               </div>
               
               <div className="profilePage__userWebsite">
-                <a class="profilePage__userWebsiteATag" href="https://www.aaronoquendo.com" target="_blank">aaronoquendo.com</a>
+                <a className="profilePage__userWebsiteATag" href="https://www.aaronoquendo.com" target="_blank" rel="noopener noreferrer">aaronoquendo.com</a>
               </div>
 
             </div>
@@ -90,19 +87,19 @@ const ProfilePage = () => {
 
         <div className="profilePage__contentBar">
           <div className="profilePage__contentTab profilePage__contentTab--selected">
-            <i class="fas fa-th"></i>
+            <i className="fas fa-th"></i>
             <span className="profilePage__span">Posts</span>
           </div>
           <div className="profilePage__contentTab">
-            <i class="fas fa-tv"></i>
+            <i className="fas fa-tv"></i>
             <span className="profilePage__span">IGTV</span>
           </div>
           <div className="profilePage__contentTab">
-            <i class="fas fa-bookmark"></i>
+            <i className="fas fa-bookmark"></i>
             <span className="profilePage__span">Saved</span>
           </div>
           <div className="profilePage__contentTab">
-            <i class="fas fa-user-tag"></i>
+            <i className="fas fa-user-tag"></i>
             <span className="profilePage__span">Tagged</span>
           </div>
         </div>
@@ -114,14 +111,14 @@ const ProfilePage = () => {
                 <img className="profilePage__userPost" src="https://i.ibb.co/j8nmwHn/nature-red-forest-leaves.jpg" alt=""/>
                 <div className="profilePage__postGridItemHoverDiv">
                   <div className="profilePage__postHoverStat">
-                    <i class="fas fa-heart"></i>
+                    <i className="fas fa-heart"></i>
                     <span className="profilePage__postHoverStatCount">
                       136
                     </span>
                   </div>
 
                   <div className="profilePage__postHoverStat">
-                    <i class="fas fa-heart"></i>
+                    <i className="fas fa-heart"></i>
                     <span className="profilePage__postHoverStatCount">
                       63
                     </span>
