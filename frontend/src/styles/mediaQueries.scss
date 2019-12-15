@@ -23,6 +23,7 @@
     }
     .feedPage__rightSection{
       width: 100%;
+      max-width: 100% !important;;
       .feedPage_userInfo{
         display: none;
       }
