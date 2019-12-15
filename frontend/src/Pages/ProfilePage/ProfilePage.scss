@@ -1,0 +1,149 @@
+#profilePage{
+  .profilePage__inner{
+    padding-top: 50px;
+    .profilePage__profileTop{
+      display: flex;
+      margin-bottom: 44px;
+      .profilePage__userAvatar{
+        display: flex;
+        flex-grow: 1;
+        flex-basis: 0;
+        margin-right: 30px;
+        img{
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+  
+      .profilePage__userInfo{
+        flex-grow: 2;
+        .profilePage__userInfoTop{
+          display: flex;
+          margin-bottom: 15px;
+          .profilePage__userName{
+            font-size: 28px;
+            margin-right: 20px;
+          }
+        }
+        .profilePage__editProfileBtnWrapper{
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          text-decoration: none;
+          margin-right: 4px;
+          .profilePage__editProfileBtn{
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            color: rgba(var(--f07,38,38,38),1);
+            color:black;
+            font-weight: 600;
+            padding: 5px 9px;
+          }
+        }
+  
+        .profilePage__settingsBtn{
+          min-height: 40px;
+          min-width: 40px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          cursor: pointer;
+          .fas{
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .profilePage__userInfoMiddle{
+        display: flex;
+        margin-bottom: 20px;
+        .profilePage__stats{
+          font-size: 16px;
+          margin-right: 40px;
+        }
+        .profilePage__countNumber{
+          color: #262626;
+          font-weight: 600;
+          margin-right: 2px;
+        }
+        .profilePage__postCount{
+          cursor: pointer;
+          .profilePage__countText{}
+        }
+        .profilePage__followerCount{
+          cursor: pointer;
+
+          .profilePage__countText{}
+        }
+        .profilePage__followingCount{
+          cursor: pointer;
+          .profilePage__countText{}
+        }
+      }
+      .profilePage__userInfoBottom{
+        .profilePage__userNickname{
+  
+        }
+        .profilePage__userBio{
+  
+        }
+        .profilePage__userWebsite{
+          .profilePage__userWebsiteATag{
+            color: #003569;
+            font-weight: 600;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .profilePage__userStories{
+      display: flex;
+      margin-bottom: 44px;
+      padding-left: 14px;
+      padding-right: 24px;
+      .profilePage__userStory{
+        padding: 10px 15px;
+        width: 115px;
+        .profilePage__userStoryImageWrapper{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img{
+            cursor: pointer;
+            height: 75px;
+            width: 75px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+          }
+          span{}
+        }
+      }
+    }
+    .profilePage__contentBar{
+      display: flex;
+      justify-content: center;
+      .profilePage__contentTab{
+        cursor: pointer;
+        margin-right:60px;
+        .fas{
+          margin-right: 8px;
+        }
+        .profilePage__span{
+          font-size: 1rem;
+          letter-spacing: 1px;
+        }
+      }
+    }
+    .profilePage__postGrid{
+      .profilePage__postGridItem{
+        .profilePage__userPost{
+  
+        }
+      }
+    }
+  }
+
+}
