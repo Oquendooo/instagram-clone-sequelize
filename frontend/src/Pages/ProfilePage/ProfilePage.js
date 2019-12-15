@@ -73,9 +73,9 @@ const ProfilePage = () => {
         </div>
 
         <div className="profilePage__userStories">
-            {[1,2,3].map( item => {
+            {[1,2,3].map( (item, index) => {
                 return(
-                  <div className="profilePage__userStory">
+                  <div className="profilePage__userStory" key={index}>
                   <div className="profilePage__userStoryImageWrapper">
                     <img src="https://instagram.fewr1-5.fna.fbcdn.net/v/t51.2885-19/s320x320/10623878_1553256358327908_1220634201_a.jpg?_nc_ht=instagram.fewr1-5.fna.fbcdn.net&oh=17287da2fd9ab631c1a560749bd34e2e&oe=5E71AB60" alt=""/>
                     <span className="profilePage__userStoryTitle">Gratitude</span>
@@ -108,10 +108,10 @@ const ProfilePage = () => {
         </div>
 
         <div className="profilePage__postGrid">
-          {[1,2,3,4,5,6].map( item => {
+          {[1,2,3,4,5,6].map( (item, index) => {
             return(
-              <div className="profilePage__postGridItem">
-                <img className="profilePage__userPost" src={postImage} alt=""/>
+              <div className="profilePage__postGridItem" key={index}>
+                <img className="profilePage__userPost" src="https://i.ibb.co/j8nmwHn/nature-red-forest-leaves.jpg" alt=""/>
                 <div className="profilePage__postGridItemHoverDiv">
                   <div className="profilePage__postHoverStat">
                     <i class="fas fa-heart"></i>
