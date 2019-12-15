@@ -1,6 +1,5 @@
 import React from 'react';
 import { Route } from 'react-router-dom';
-
 import Header from '../ResuableComponents/Header/Header';
 import ExplorePage from '../Pages/ExplorePage/ExplorePage';
 import ProfilePage from '../Pages/ProfilePage/ProfilePage';
@@ -19,7 +18,7 @@ function App() {
 
       <Route exact path='/' component={props => <FeedPage {...props} /> }/>
 
-      <Route exact path='/explore/' component={props => <ExplorePage {...props} /> }/>
+      <Route exact path='/explore' component={props => <ExplorePage {...props} /> }/>
 
       <Route exact path='/:username' component={props => <ProfilePage {...props} /> }/>
 

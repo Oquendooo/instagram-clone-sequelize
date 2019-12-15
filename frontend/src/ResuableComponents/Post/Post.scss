@@ -18,6 +18,10 @@
       margin-left:16px;
       display: flex;
       justify-content: space-between;
+      a{
+        text-decoration: none;
+        color: black;
+      }
       .post__username{
         font-weight: 500;
       }
@@ -76,11 +80,15 @@
     .post__post_content{
       display: flex;
       padding: 0 16px;
-      .post__poster_username{
-        margin-right: 4px;
-        color: #262626;
-        font-weight: 600;
-        cursor: pointer;
+      a{
+        text-decoration: none;
+        color: black;
+        .post__poster_username{
+          margin-right: 4px;
+          color: #262626;
+          font-weight: 600;
+          cursor: pointer;
+        }
       }
     }
     .post__viewall_button_wrapper{
@@ -94,13 +102,17 @@
       .post__comment{
         display: flex;
         padding: 0 16px;
-
-        .post__commenter_username{
-          margin-right: 4px;
-          color: #262626;
-          font-weight: 600;
-          cursor: pointer;
+        a{
+          text-decoration: none;
+          color:black;
+          .post__commenter_username{
+            margin-right: 4px;
+            color: #262626;
+            font-weight: 600;
+            cursor: pointer;
+          }
         }
+ 
         .post__comment_body{}
       }
     }

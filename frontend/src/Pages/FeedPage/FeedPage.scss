@@ -26,9 +26,14 @@
       }
       .feedPage_username_and_nickname{
           margin-left: 14px;
-        .feedPage_username{
-          font-weight: bold;
-        }
+          a{
+            text-decoration: none;
+            color:black;
+            .feedPage_username{
+              font-weight: bold;
+            }
+          }
+     
         .feedPage_nickname{
 
         }
