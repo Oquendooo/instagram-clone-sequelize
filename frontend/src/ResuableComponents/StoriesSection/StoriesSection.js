@@ -1,4 +1,5 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 import './StoriesSection.scss';
 
 const StoriesSection = () => {
@@ -19,18 +20,21 @@ const StoriesSection = () => {
         </div>
 
         <div className="storiesSection__userStories">
-          {testArray.map( userStory => {
+          {testArray.map( (userStory, index) => {
             return(
-              <div className="storiesSection__userStory">
+              <div className="storiesSection__userStory" key={index}>
                 <img src="https://tinyfac.es/data/avatars/A7299C8E-CEFC-47D9-939A-3C8CA0EA4D13-200w.jpeg" alt=""/>
-                <div className="storiesSection__username_and_time">
-                  <div className="storiesSection__username">
-                    jane.bell.may
+                <Link to="/stories/profile">
+                  <div className="storiesSection__username_and_time">
+                    <div className="storiesSection__username">
+                      jane.bell.may
+                    </div>
+                    <div className="storiesSection__time">
+                      35 minutes ago  
+                    </div>
                   </div>
-                  <div className="storiesSection__time">
-                    35 minutes ago  
-                  </div>
-                </div>
+                </Link>
+
               </div>
             );
           })}
