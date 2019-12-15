@@ -24,16 +24,15 @@ app.use(bodyParser.urlencoded({extended: false}));
 // app.use('/api/v1', PostController);
 
 //Serve any static files built by React
-if(process.env.PORT){
-  app.use(express.static(path.join(__dirname, 'frontend', 'build')));
+app.use(express.static(path.join(__dirname, 'frontend', 'build')));
 
-  app.get('/*', (req, res) => {
-    res.sendFile(path.join(__dirname, 'front', 'build', 'index.html'))
-  });
-}
+app.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'front', 'build', 'index.html'))
+});
 
-http.createServer(app).listen(4000);
-console.log("Running a http server on port ", 4000);
+const PORT = process.env.PORT || 4000;
+http.createServer(app).listen(PORT);
+console.log("Running a http server on port ", PORT);
 
 
 

@@ -1,0 +1,209 @@
+#profilePage{
+  .profilePage__inner{
+    padding-top: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    .profilePage__profileTop{
+      display: flex;
+      margin-bottom: 44px;
+      .profilePage__userAvatar{
+        display: flex;
+        justify-content: center;
+        flex-grow: 1;
+        flex-basis: 0;
+        margin-right: 30px;
+        
+        img{
+          height: 150px;
+          width: 150px;
+          border-radius: 50%;
+          cursor: pointer;
+        }
+      }
+  
+      .profilePage__userInfo{
+        flex-basis: 30px;
+        flex-grow: 2;
+        .profilePage__userInfoTop{
+          display: flex;
+          margin-bottom: 15px;
+          .profilePage__userName{
+            font-size: 28px;
+            margin-right: 20px;
+          }
+        }
+        .profilePage__editProfileBtnWrapper{
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          text-decoration: none;
+          margin-right: 4px;
+          .profilePage__editProfileBtn{
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            color: rgba(var(--f07,38,38,38),1);
+            color:black;
+            font-weight: 600;
+            padding: 5px 9px;
+          }
+        }
+  
+        .profilePage__settingsBtn{
+          min-height: 40px;
+          min-width: 40px;
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          cursor: pointer;
+          .fas{
+            font-size: 1.5rem;
+          }
+        }
+      }
+      .profilePage__userInfoMiddle{
+        display: flex;
+        margin-bottom: 20px;
+        .profilePage__stats{
+          font-size: 16px;
+          margin-right: 40px;
+        }
+        .profilePage__countNumber{
+          color: #262626;
+          font-weight: 600;
+          margin-right: 2px;
+        }
+        .profilePage__postCount{
+          cursor: pointer;
+          .profilePage__countText{}
+        }
+        .profilePage__followerCount{
+          cursor: pointer;
+
+          .profilePage__countText{}
+        }
+        .profilePage__followingCount{
+          cursor: pointer;
+          .profilePage__countText{}
+        }
+      }
+      .profilePage__userInfoBottom{
+        .profilePage__userNickname{
+  
+        }
+        .profilePage__userBio{
+  
+        }
+        .profilePage__userWebsite{
+          .profilePage__userWebsiteATag{
+            color: #003569;
+            font-weight: 600;
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .profilePage__userStories{
+      display: flex;
+      margin-bottom: 44px;
+      padding-left: 14px;
+      padding-right: 24px;
+      .profilePage__userStory{
+        padding: 10px 15px;
+        width: 115px;
+        .profilePage__userStoryImageWrapper{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          img{
+            cursor: pointer;
+            height: 75px;
+            width: 75px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+          }
+          span{}
+        }
+      }
+    }
+    .profilePage__contentBar{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-top: 1px solid #efefef;
+      .profilePage__contentTab{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 52px;
+        margin-right:60px;
+        text-transform: uppercase;
+        
+        cursor: pointer;
+        .fas{
+          margin-right: 8px;
+        }
+        .profilePage__span{
+          font-size: 1rem;
+          letter-spacing: 1px;
+        }
+      }
+      .profilePage__contentTab--selected{
+        border-top: 1px solid #262626;
+      }
+    }
+    .profilePage__postGrid{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .profilePage__postGridItem{
+        flex: 0 0 32%;                       /* don't grow, don't shrink, width */
+        margin-bottom: 15px;
+        position: relative;
+
+        z-index: 1;
+        .profilePage__userPost{
+          width: 100%;
+          cursor: pointer;
+        }
+        .profilePage__postGridItemHoverDiv{
+          width: 100%;
+          position: absolute;
+          z-index: 2;
+          height: 100%;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          color:white;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 1.1rem;
+          background: rgba(0,0,0,0.7);
+          display: none;
+          user-select: none;
+          .profilePage__postHoverStat{
+            .fas{
+              margin-right: 5px;
+            }
+            .profilePage__postHoverStatCount{
+
+            }
+          }
+        }
+        .profilePage__postGridItemHoverDiv > .profilePage__postHoverStat:not(:last-child){
+          margin-right: 15px;
+        }
+      
+      }
+      .profilePage__postGridItem:hover > .profilePage__postGridItemHoverDiv{
+        display: flex;
+        cursor: pointer;
+      }
+
+    }
+  }
+
+}

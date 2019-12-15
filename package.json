@@ -9,13 +9,21 @@
     "dev": "concurrently \"npm run backend\" \"npm run frontend\"",
     "frontend": "npm run start --prefix frontend",
     "backend": "nodemon --exec babel-node server.js",
-    "start": "cd ./frontend && npm install && npm run build && cd .. && npm run backend"
+    "clean": "rm -rf build && mkdir build",
+    "start": "nodemon --exec babel-node server.js",
+    "heroku-postbuild": "cd frontend && npm install --only=dev && npm install && npm run build",
+    "w": "webpack --watch",
+    "s": "webpack-dev-server --open",
+    "build": "webpack --config webpack.config.babel.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/preset-env": "^7.7.1",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/register": "^7.7.4",
     "body-parser": "^1.19.0",
     "bootstrap": "^4.4.0",
     "concurrently": "^5.0.0",
@@ -29,7 +37,14 @@
     "sequelize": "^5.21.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.2",
-    "@babel/node": "^7.7.0"
+    "@babel/core": "^7.7.5",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.7.6",
+    "@babel/register": "^7.7.4",
+    "babel-loader": "^8.0.6",
+    "html-webpack-plugin": "^3.2.0",
+    "script-ext-html-webpack-plugin": "^2.1.4",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10"
   }
 }
