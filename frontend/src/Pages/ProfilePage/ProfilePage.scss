@@ -1,3 +1,10 @@
+@mixin edit-profile-button {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+
 #profilePage{
   .profilePage__inner{
     padding-top: 50px;
@@ -49,6 +56,27 @@
             padding: 5px 9px;
           }
         }
+
+        .profilePage__editProfileBtnWrapperMobile{
+          display: none;
+          text-decoration: none;
+          margin-right: 4px;
+          flex: 0 0 100%;
+          
+          .profilePage__editProfileBtn{
+            display: flex;
+            justify-content: center;
+            cursor: pointer;
+            background-color: transparent;
+            border: 1px solid #dbdbdb;
+            border-radius: 4px;
+            color: rgba(var(--f07,38,38,38),1);
+            color:black;
+            font-weight: 600;
+            padding: 5px 9px;
+          }
+        }
+        
   
         .profilePage__settingsBtn{
           min-height: 40px;
@@ -93,8 +121,9 @@
   
         }
         .profilePage__userBio{
-  
+    
         }
+
         .profilePage__userWebsite{
           .profilePage__userWebsiteATag{
             color: #003569;
@@ -103,6 +132,9 @@
           }
         }
       }
+    }
+    .profilePage__userBioMobile{
+      display: none;
     }
     .profilePage__userStories{
       display: flex;
@@ -206,4 +238,46 @@
     }
   }
 
+}
+
+/* Media Queries*/
+
+@media screen and (max-width: 735px) {
+  #profilePage {
+    .profilePage__inner{
+      .profilePage__profileTop{
+        .profilePage__userInfo{
+          .profilePage__userInfoTop{
+            .profilePage__editProfileBtnWrapper{
+              display: none;
+          
+            }
+          }
+          .profilePage__editProfileBtnWrapperMobile{
+            display: block;
+          }
+          .profilePage__userInfoBottom{
+            display: none;
+          }
+        }
+        .profilePage__userInfoMiddle{
+          display: none;
+        }
+      }
+      .profilePage__userBioMobile{
+        display: block;
+      }
+      .profilePage__contentBar{
+
+    justify-content: space-around;
+        .profilePage__contentTab{
+          margin-right:0;
+          .profilePage__span{
+            display: none;
+          }
+        }
+
+      }
+    }
+  }
 }
