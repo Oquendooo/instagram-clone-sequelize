@@ -26,6 +26,9 @@ const ProfilePage = () => {
                 <i className="fas fa-cog"></i>
               </div>
             </div>
+            <Link to="/accounts/edit" className="profilePage__editProfileBtnWrapperMobile">
+                <div className="profilePage__editProfileBtn">Edit Profile</div>
+              </Link>
 
             <div className="profilePage__userInfoMiddle">
               <div className="profilePage__postCount profilePage__stats">
@@ -67,6 +70,16 @@ const ProfilePage = () => {
 
             </div>
           </div>
+        </div>
+
+        <div className="profilePage__userBio profilePage__userBioMobile">
+          <span role="img" aria-label="libra">♎️</span> Always Stay True To Your Self
+          <br />
+          <span role="img" aria-label="magic">✨</span> Optimist
+          <br />
+          <span role="img" aria-label="computer">💻</span> Software Engineer/Developer
+          <br />
+          <span role="img" aria-label="pin">📍</span> NY
         </div>
 
         <div className="profilePage__userStories">
